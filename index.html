@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khalil Athallah - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .typing-animation {
+            border-right: 2px solid #667eea;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { border-color: #667eea; }
+            51%, 100% { border-color: transparent; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-gray-800">Khalil Athallah</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-purple-600 transition-colors">Beranda</a>
+                    <a href="#about" class="text-gray-600 hover:text-purple-600 transition-colors">Tentang</a>
+                    <a href="#skills" class="text-gray-600 hover:text-purple-600 transition-colors">Keahlian</a>
+                    <a href="#achievment" class="text-gray-600 hover:text-purple-600 transition-colors">Pencapaian</a>
+                    <a href="#education" class="text-gray-600 hover:text-purple-600 transition-colors">Pendidikan</a>
+                    <a href="#hobbies" class="text-gray-600 hover:text-purple-600 transition-colors">Hobi</a>
+                    <a href="#contact" class="text-gray-600 hover:text-purple-600 transition-colors">Kontak</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="#home" class="block text-gray-600 hover:text-purple-600 py-2">Beranda</a>
+                <a href="#about" class="block text-gray-600 hover:text-purple-600 py-2">Tentang</a>
+                <a href="#skills" class="block text-gray-600 hover:text-purple-600 py-2">Keahlian</a>
+                <a href="#achievment" class="block text-gray-600 hover:text-purple-600 py-2">Pencapaian</a>
+                <a href="#education" class="block text-gray-600 hover:text-purple-600 py-2">Pendidikan</a>
+                <a href="#hobbies" class="block text-gray-600 hover:text-purple-600 py-2">Hobi</a>
+                <a href="#contact" class="block text-gray-600 hover:text-purple-600 py-2">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white">
+        <div class="text-center px-6 fade-in">
+            <div class="w-32 h-32 mx-auto mb-8 bg-white/20 rounded-full overflow-hidden border-4 border-white/30">
+                <img src="Kh.jpg" alt="Khalil Athallah" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-6xl text-white\'>👨‍💻</div>';">
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Khalil Athallah</h1>
+            <p class="text-xl md:text-2xl mb-8 typing-animation" id="typing-text">Mahasiswa</p>
+            <div class="space-x-4">
+                <a href="#education" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">Lihat Pendidikan</a>
+                <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-colors">Hubungi Saya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Tentang Saya</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-purple-400 to-blue-500 rounded-2xl flex items-center justify-center text-8xl text-white shadow-2xl">
+                        🚀
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Halo! Saya Khalil Athallah</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Saya adalah seorang mahasiswa universitas negeri medan yang tertarik dalam menciptakan pengalaman digital yang menakjubkan. Dengan pengalaman dalam berbagai teknologi modern, saya selalu berusaha menghadirkan solusi kreatif dan inovatif.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Saya ramah bintang 5.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="text-center p-4 bg-gray-50 rounded-lg">
+                            <div class="text-2xl font-bold text-purple-600">17</div>
+                            <div class="text-gray-600">Tahun</div>
+                            </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-lg">
+                            <div class="text-2xl font-bold text-purple-600">4+</div>
+                            <div class="text-gray-600">Bulan Pengalaman PKL</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Keahlian & Skill</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Teknologi dan tools yang saya kuasai</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover fade-in">
+                    <div class="text-4xl mb-4 text-center">🌐</div>
+                    <h3 class="text-lg font-bold text-gray-800 text-center">Instalasi dan Konfigurasi Perangkat Jaringan (Router, Switch, dsbg)</h3>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover fade-in">
+                    <div class="text-4xl mb-4 text-center">⚙️</div>
+                    <h3 class="text-lg font-bold text-gray-800 text-center">Manajemen IP Address, Subnetting, dan Sharing Recources dalam Jaringan Lokal</h3>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover fade-in">
+                    <div class="text-4xl mb-4 text-center">🎨</div>
+                    <h3 class="text-lg font-bold text-gray-800 text-center">Perancangan dan Desain Topologi Jaringan</h3>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover fade-in">
+                    <div class="text-4xl mb-4 text-center">🛠️</div>
+                    <h3 class="text-lg font-bold text-gray-800 text-center">Penggunaan Alat Bantu Jaringan Seperti Kabel Tester, Crimping Tools, dan sebagainya</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Sertifikat & Pencapaian</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Sertifikasi yang telah saya raih dalam bidang teknologi</p>
+            </div>
+            <div class="flex justify-center fade-in">
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200 max-w-2xl w-full">
+                    <!-- INI BAGIAN FOTO SERTIFIKAT -->
+                    <!-- Ganti URL di bawah ini dengan link foto sertifikat Anda -->
+                    <div class="bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center border-b border-gray-200">
+                        <img src="sertif.jpg" alt="Sertifikat Khalil Athallah" class="w-full h-auto object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-96 flex flex-col items-center justify-center text-gray-400\'><div class=\'text-6xl mb-4\'>📜</div><div class=\'text-lg font-semibold\'>Foto Sertifikat</div><div class=\'text-sm\'>Ganti URL gambar di kode</div></div>';">
+                    </div>
+                    <!-- AKHIR BAGIAN FOTO SERTIFIKAT -->
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Junior Technical Support Certificate</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Sertifikat profesional di bidang Jaringan Komputer yang mencakup kemampuan instalasi, konfigurasi, dan pemeliharaan jaringan komputer. Menguasai troubleshooting dasar, dukungan teknis pengguna, serta manajemen perangkat jaringan untuk memastikan sistem berjalan optimal.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                                    <span class="text-purple-600 font-bold text-sm">🏆</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800">BNSP & LSP</div>
+                                    <div class="text-sm text-gray-500">Badan Nasional Sertifikasi Profesi & Lembaga Sertifikasi Profesi</div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-lg font-bold text-purple-600">2025</div>
+                                <div class="text-sm text-gray-500">Tahun Perolehan</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Riwayat Pendidikan</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Perjalanan pendidikan yang membentuk fondasi pengetahuan dan keterampilan saya</p>
+            </div>
+            <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-6xl text-white">
+                        <img src="logo.png" alt="Khalil Athallah" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-6xl text-white\'>👨‍💻</div>';">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">SD Swasta Kartika 1 - 2 Medan</h3>
+                        <p class="text-gray-600 mb-4">Jl. Brigjend H.A Manaf Lubis, Helvetia Tengah, Kec. Medan Helvetia, Kota Medan, Sumatera Utara 20123</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">2013-2019</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm"></span>
+                        </div>
+                        <div class="text-purple-600 font-semibold"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center text-6xl text-white">
+                        <img src="logo.png" alt="Khalil Athallah" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-6xl text-white\'>👨‍💻</div>';">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">SMP Swasta Kartika 1 - 2 Medan</h3>
+                        <p class="text-gray-600 mb-4">Jl. Brigjend H.A Manaf Lubis, Helvetia Tengah, Kec. Medan Helvetia, Kota Medan, Sumatera Utara 20124</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">2019-2022</span>
+                            <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm"></span>
+                        </div>
+                        <div class="text-purple-600 font-semibold"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in">
+                    <div class="h-48 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center text-6xl text-white">
+                        <img src="smkn9.jpeg" alt="Khalil Athallah" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-6xl text-white\'>👨‍💻</div>';">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">SMK Negeri 9 Medan</h3>
+                        <p class="text-gray-600 mb-4">Jl. Patriot No.20 A, Lalang, Kec. Medan Sunggal, Kota Medan, Sumatera Utara 20123</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">2022-2025</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">Jurusan : Teknik Komputer Jaringan</span>
+                        </div>
+                        <div class="text-purple-600 font-semibold"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Hobi & Minat</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-gray-50 rounded-xl card-hover fade-in">
+                    <div class="text-5xl mb-4">🎮</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Gaming</h3>
+                    <p class="text-gray-600 text-sm">Bermain Honkai Star Rail dan Mobile Legends</p>
+                </div>
+                
+                <div class="text-center p-6 bg-gray-50 rounded-xl card-hover fade-in">
+                    <div class="text-5xl mb-4">📚</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Membaca</h3>
+                    <p class="text-gray-600 text-sm">Membaca Novel dan komik</p>
+                </div>
+                
+                <div class="text-center p-6 bg-gray-50 rounded-xl card-hover fade-in">
+                    <div class="text-5xl mb-4">🎵</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Musik</h3>
+                    <p class="text-gray-600 text-sm">Mendengarkan musik pop dan sebagainya</p>
+                </div>
+                
+                <div class="text-center p-6 bg-gray-50 rounded-xl card-hover fade-in">
+                    <div class="text-5xl mb-4">🏃‍♂️</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Olahraga</h3>
+                    <p class="text-gray-600 text-sm">Biasanya sih badminton</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold mb-4">Kontak</h2>
+                <div class="w-20 h-1 bg-white mx-auto mb-4"></div>
+                <p class="text-xl opacity-90">Mari saling terhubung, dan berdiskusi bersama!</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold mb-6">Hubungi Saya Melalui :</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-xl">📧</div>
+                            <div>
+                                <div class="font-semibold">Email</div>
+                                <div class="opacity-90">khalilathallahkhalil@email.com</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-xl">📱</div>
+                            <div>
+                                <div class="font-semibold">WhatsApp</div>
+                                <div class="opacity-90">+62 896-7037-2747</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-xl">📷</div>
+                            <div>
+                                <div class="font-semibold">Instagram</div>
+                                <div class="opacity-90">@khalilathh</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <input type="text" placeholder="Nama Lengkap" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:border-white/50 transition-colors">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:border-white/50 transition-colors">
+                        </div>
+                        <div>
+                            <textarea rows="4" placeholder="Pesan Anda" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:border-white/50 transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-white text-purple-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2025 Khalil Athallah. Dibuat dengan paksaan T.T</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Typing animation
+        const typingText = document.getElementById('typing-text');
+        const texts = ['Web Developer & Designer', 'Frontend Specialist', 'UI/UX Enthusiast', 'Creative Problem Solver'];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeWriter() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentText.length) {
+                setTimeout(() => isDeleting = true, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+            }
+
+            setTimeout(typeWriter, isDeleting ? 50 : 100);
+        }
+
+        typeWriter();
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.2s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const message = this.querySelector('textarea').value;
+            
+            // Simple validation
+            if (!name || !email || !message) {
+                alert('Mohon lengkapi semua field!');
+                return;
+            }
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Mengirim...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Terima kasih! Pesan Anda telah terkirim. Saya akan segera menghubungi Anda kembali.');
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'989b667166906034',t:'MTc1OTY1MTM4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
