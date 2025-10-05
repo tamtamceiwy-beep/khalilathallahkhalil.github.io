@@ -57,7 +57,7 @@
                     <a href="#home" class="text-gray-600 hover:text-purple-600 transition-colors">Beranda</a>
                     <a href="#about" class="text-gray-600 hover:text-purple-600 transition-colors">Tentang</a>
                     <a href="#skills" class="text-gray-600 hover:text-purple-600 transition-colors">Keahlian</a>
-                    <a href="#achievment" class="text-gray-600 hover:text-purple-600 transition-colors">Pencapaian</a>
+                    <a href="#certificates" class="text-gray-600 hover:text-purple-600 transition-colors">Pencapaian</a>
                     <a href="#education" class="text-gray-600 hover:text-purple-600 transition-colors">Pendidikan</a>
                     <a href="#hobbies" class="text-gray-600 hover:text-purple-600 transition-colors">Hobi</a>
                     <a href="#contact" class="text-gray-600 hover:text-purple-600 transition-colors">Kontak</a>
@@ -72,7 +72,7 @@
                 <a href="#home" class="block text-gray-600 hover:text-purple-600 py-2">Beranda</a>
                 <a href="#about" class="block text-gray-600 hover:text-purple-600 py-2">Tentang</a>
                 <a href="#skills" class="block text-gray-600 hover:text-purple-600 py-2">Keahlian</a>
-                <a href="#achievment" class="block text-gray-600 hover:text-purple-600 py-2">Pencapaian</a>
+                <a href="#certificates" class="block text-gray-600 hover:text-purple-600 py-2">Pencapaian</a>
                 <a href="#education" class="block text-gray-600 hover:text-purple-600 py-2">Pendidikan</a>
                 <a href="#hobbies" class="block text-gray-600 hover:text-purple-600 py-2">Hobi</a>
                 <a href="#contact" class="block text-gray-600 hover:text-purple-600 py-2">Kontak</a>
@@ -81,20 +81,31 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white">
-        <div class="text-center px-6 fade-in">
-            <div class="w-32 h-32 mx-auto mb-8 bg-white/20 rounded-full overflow-hidden border-4 border-white/30">
-                <img src="Kh.jpg" alt="Khalil Athallah" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-6xl text-white\'>👨‍💻</div>';">
-            </div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-4">Khalil Athallah</h1>
-            <p class="text-xl md:text-2xl mb-8 typing-animation" id="typing-text">Mahasiswa</p>
-            <div class="space-x-4">
-                <a href="#education" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">Lihat Pendidikan</a>
-                <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-colors">Hubungi Saya</a>
-            </div>
-        </div>
-    </section>
+<section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white px-4 py-10">
+  <div class="text-center fade-in w-full max-w-xl">
+    <div class="w-32 h-32 mx-auto mb-6 bg-white/20 rounded-full overflow-hidden border-4 border-white/30">
+      <img src="Kh.jpg" alt="Khalil Athallah" class="w-full h-full object-cover"
+        onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-6xl text-white\'>👨‍💻</div>';">
+    </div>
 
+    <!-- Nama dan teks -->
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-3">Khalil Athallah</h1>
+    <p class="text-lg sm:text-xl md:text-2xl mb-6 typing-animation" id="typing-text">Mahasiswa</p>
+
+    <!-- Tombol -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#education"
+        class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors w-full sm:w-auto text-center">
+        Lihat Pendidikan
+      </a>
+      <a href="#contact"
+        class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-colors w-full sm:w-auto text-center">
+        Hubungi Saya
+      </a>
+    </div>
+  </div>
+</section>
+    
     <!-- About Section -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
@@ -463,3 +474,4 @@
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'989b667166906034',t:'MTc1OTY1MTM4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+
